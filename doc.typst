@@ -1,0 +1,15 @@
+#import "@preview/min-book:0.1.0": book
+
+#show: book.with(
+  title: "Mod Design Doc",
+  subtitle: "",
+  authors: "Author",
+  part: "Subject",
+  chapter: "Detail",
+)
+
+= Introduction
+
+==
+
+#lorem(100)

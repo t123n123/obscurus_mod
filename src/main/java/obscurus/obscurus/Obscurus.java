@@ -17,6 +17,7 @@ public class Obscurus implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ObscurusItems.initialize();
+		ObscurusBlocks.initialize();
 
 		LOGGER.info("Hello Fabric world!");
 
