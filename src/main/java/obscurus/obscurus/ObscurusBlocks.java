@@ -5,6 +5,8 @@ import java.util.function.Function;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -20,10 +22,18 @@ public class ObscurusBlocks {
     public static final Block CONDENSED_DIRT = register(
         "condensed_dirt", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS), true);
 
+	public static final Block OBSCURUS_WOOD = register("obscurus_wood", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LOG), true);
+	public static final Block OBSCURUS_PLANKS = register("obscurus_planks", Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS) , true);
+	public static final Block OBSCURUS_LOG = register("obscurus_log", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LOG) , true);
+
     public static void initialize() {
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((itemGroup) -> 
-            itemGroup.add(CONDENSED_DIRT)
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((itemGroup) -> {
+            itemGroup.add(CONDENSED_DIRT);
+			itemGroup.add(OBSCURUS_LOG);
+			itemGroup.add(OBSCURUS_PLANKS);
+			itemGroup.add(OBSCURUS_WOOD);
+		}
         );
 
     }
