@@ -16,9 +16,6 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-            .add(ObscurusBlocks.CONDENSED_DIRT);
-
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
             .add(ObscurusBlocks.OBSCURUS_LOG)
             .add(ObscurusBlocks.OBSCURUS_PLANKS);

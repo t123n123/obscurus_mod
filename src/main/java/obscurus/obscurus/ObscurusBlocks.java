@@ -19,9 +19,6 @@ import net.minecraft.util.Identifier;
 
 public class ObscurusBlocks {
 
-    public static final Block CONDENSED_DIRT = register(
-        "condensed_dirt", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS), true);
-
 	public static final Block OBSCURUS_WOOD = register("obscurus_wood", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LOG), true);
 	public static final Block OBSCURUS_PLANKS = register("obscurus_planks", Block::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS) , true);
 	public static final Block OBSCURUS_LOG = register("obscurus_log", PillarBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_LOG) , true);
@@ -29,7 +26,6 @@ public class ObscurusBlocks {
     public static void initialize() {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((itemGroup) -> {
-            itemGroup.add(CONDENSED_DIRT);
 			itemGroup.add(OBSCURUS_LOG);
 			itemGroup.add(OBSCURUS_PLANKS);
 			itemGroup.add(OBSCURUS_WOOD);

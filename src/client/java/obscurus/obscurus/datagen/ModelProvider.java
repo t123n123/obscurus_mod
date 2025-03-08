@@ -15,10 +15,7 @@ public class ModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ObscurusBlocks.CONDENSED_DIRT);
         blockStateModelGenerator.registerSimpleCubeAll(ObscurusBlocks.OBSCURUS_PLANKS);
-        // blockStateModelGenerator.registerLog(ObscurusBlocks.OBSCURUS_LOG);
-        // blockStateModelGenerator.registerSingleton(ObscurusBlocks.OBSCURUS_LOG, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerLog(ObscurusBlocks.OBSCURUS_LOG).log(ObscurusBlocks.OBSCURUS_LOG).wood(ObscurusBlocks.OBSCURUS_WOOD);
     }
 

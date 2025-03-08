@@ -21,6 +21,7 @@ public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(ObscurusBlocks.OBSCURUS_LOG.asItem())
             .add(ObscurusBlocks.OBSCURUS_WOOD.asItem());
 
+
         getOrCreateTagBuilder(ItemTags.PLANKS)
             .add(ObscurusBlocks.OBSCURUS_PLANKS.asItem());
     }

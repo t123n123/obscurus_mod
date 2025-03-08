@@ -15,7 +15,6 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ObscurusBlocks.CONDENSED_DIRT);
         addDrop(ObscurusBlocks.OBSCURUS_LOG);
         addDrop(ObscurusBlocks.OBSCURUS_PLANKS);
         addDrop(ObscurusBlocks.OBSCURUS_WOOD);

@@ -27,12 +27,9 @@ public class RecipeProvider extends FabricRecipeProvider {
         return new RecipeGenerator(registryLookup, exporter) {
             @Override
             public void generate() {
-                offer2x2CompactingRecipe(RecipeCategory.MISC, ObscurusItems.amongus , ObscurusItems.amongus);
-                offerShapelessRecipe(ObscurusItems.amongus, ObscurusBlocks.CONDENSED_DIRT, "amongus", 4);
+                offer2x2CompactingRecipe(RecipeCategory.MISC, ObscurusBlocks.OBSCURUS_WOOD, ObscurusBlocks.OBSCURUS_LOG);
                 offerShapelessRecipe(ObscurusBlocks.OBSCURUS_PLANKS, ObscurusBlocks.OBSCURUS_LOG, "obscurus", 4);
                 offerShapelessRecipe(ObscurusBlocks.OBSCURUS_PLANKS, ObscurusBlocks.OBSCURUS_WOOD, "obscurus", 4);
-                // offerShapelessRecipe(ObscurusBlocks.OBSCURUS_WOOD, ObscurusBlocks.OBSCURUS_PLANKS, "obscurus", 4);
-                offer2x2CompactingRecipe(RecipeCategory.MISC, ObscurusBlocks.OBSCURUS_LOG, ObscurusBlocks.OBSCURUS_WOOD);
             }
         };
         
