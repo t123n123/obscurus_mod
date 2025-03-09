@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.client.data.TexturedModel;
 import obscurus.obscurus.ObscurusBlocks;
 import obscurus.obscurus.ObscurusItems;
 
@@ -17,6 +18,9 @@ public class ModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ObscurusBlocks.OBSCURUS_PLANKS);
         blockStateModelGenerator.registerLog(ObscurusBlocks.OBSCURUS_LOG).log(ObscurusBlocks.OBSCURUS_LOG).wood(ObscurusBlocks.OBSCURUS_WOOD);
+        blockStateModelGenerator.registerSingleton(ObscurusBlocks.OBSCURUS_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ObscurusBlocks.OBSCURUS_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+
     }
 
     @Override

@@ -1,6 +1,8 @@
 package obscurus.obscurus;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import obscurus.obscurus.world.gen.ObscurusWorldGeneration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +20,13 @@ public class Obscurus implements ModInitializer {
 	public void onInitialize() {
 		ObscurusItems.initialize();
 		ObscurusBlocks.initialize();
+
+		FlammableBlockRegistry.getDefaultInstance().add(ObscurusBlocks.OBSCURUS_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ObscurusBlocks.OBSCURUS_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ObscurusBlocks.OBSCURUS_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ObscurusBlocks.OBSCURUS_LEAVES, 30, 60);
+
+		ObscurusWorldGeneration.generateWorldGen();
 
 		LOGGER.info("Hello Fabric world!");
 

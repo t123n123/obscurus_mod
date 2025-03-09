@@ -24,6 +24,12 @@ public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
             .add(ObscurusBlocks.OBSCURUS_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LEAVES)
+            .add(ObscurusBlocks.OBSCURUS_LEAVES.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SAPLINGS)
+            .add(ObscurusBlocks.OBSCURUS_SAPLING.asItem());
     }
     
 }

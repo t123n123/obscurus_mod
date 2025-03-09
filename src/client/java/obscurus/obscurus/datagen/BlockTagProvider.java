@@ -23,6 +23,12 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
             .add(ObscurusBlocks.OBSCURUS_LOG)
             .add(ObscurusBlocks.OBSCURUS_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+            .add(ObscurusBlocks.OBSCURUS_LEAVES);
+        
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+            .add(ObscurusBlocks.OBSCURUS_SAPLING);
     }
     
 }

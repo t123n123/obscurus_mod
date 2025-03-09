@@ -9,7 +9,6 @@ import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 import obscurus.obscurus.ObscurusBlocks;
-import obscurus.obscurus.ObscurusItems;
 
 public class RecipeProvider extends FabricRecipeProvider {
 
