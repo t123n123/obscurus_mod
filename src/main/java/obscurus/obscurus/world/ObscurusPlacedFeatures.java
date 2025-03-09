@@ -2,7 +2,6 @@ package obscurus.obscurus.world;
 
 import java.util.List;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -25,7 +24,7 @@ public class ObscurusPlacedFeatures {
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, OBSCURUS_PLACED_TREE_KEY, configuredFeatures.getOrThrow(ObscurusConfiguredFeatures.OSBSCURUS_TREE_KEY),
+        register(context, OBSCURUS_PLACED_TREE_KEY, configuredFeatures.getOrThrow(ObscurusConfiguredFeatures.OBSCURUS_TREE_KEY),
             VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                 PlacedFeatures.createCountExtraModifier(0, 0.01f, 1), ObscurusBlocks.OBSCURUS_SAPLING));
     }

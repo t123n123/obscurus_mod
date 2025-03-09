@@ -1,16 +1,7 @@
 package obscurus.obscurus;
 
-import java.util.Optional;
-import java.util.function.Function;
-
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.PillarBlock;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SaplingGenerator;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -21,11 +12,14 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import obscurus.obscurus.world.ObscurusConfiguredFeatures;
 
+import java.util.Optional;
+import java.util.function.Function;
+
 public class ObscurusBlocks {
 
 	public static final SaplingGenerator OBSCURUS_SAPLING_GENERATOR = new SaplingGenerator(
 			Obscurus.MOD_ID + ":obscurus_tree",
-			Optional.empty(), Optional.of(ObscurusConfiguredFeatures.OSBSCURUS_TREE_KEY), Optional.empty());
+			Optional.empty(), Optional.of(ObscurusConfiguredFeatures.OBSCURUS_TREE_KEY), Optional.empty());
 
 	public static final Block OBSCURUS_WOOD = register("obscurus_wood", PillarBlock::new,
 			AbstractBlock.Settings.copy(Blocks.OAK_LOG), true);

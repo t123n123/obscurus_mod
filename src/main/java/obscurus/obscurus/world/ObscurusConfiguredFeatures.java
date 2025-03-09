@@ -1,36 +1,46 @@
 package obscurus.obscurus.world;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.DarkOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import obscurus.obscurus.Obscurus;
 import obscurus.obscurus.ObscurusBlocks;
 
+import java.util.OptionalInt;
+
 public class ObscurusConfiguredFeatures {
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> OSBSCURUS_TREE_KEY = registerKey("obscurus_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> OBSCURUS_TREE_KEY = registerKey("obscurus_tree");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-    
 
-        register(context, OSBSCURUS_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+        register(context, OBSCURUS_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ObscurusBlocks.OBSCURUS_LOG),
-                new StraightTrunkPlacer(3, 5, 2),
+                new DarkOakTrunkPlacer(8, 2, 2),
                 BlockStateProvider.of(ObscurusBlocks.OBSCURUS_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 4),
-                new TwoLayersFeatureSize(1, 0, 2)
-            )
-            .build());
+                new DarkOakFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0)),
+                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())
+        ).build());
+
+//        register(context, OBSCURUS_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+//                BlockStateProvider.of(ObscurusBlocks.OBSCURUS_LOG),
+//                new StraightTrunkPlacer(3, 5, 2),
+//                BlockStateProvider.of(ObscurusBlocks.OBSCURUS_LEAVES),
+//                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 4),
+//                new TwoLayersFeatureSize(1, 0, 2)
+//            )
+//            .build());
     }
 
 

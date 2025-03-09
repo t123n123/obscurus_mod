@@ -26,6 +26,7 @@ public class ModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ObscurusItems.amongus, Models.GENERATED);
+        itemModelGenerator.register(ObscurusBlocks.OBSCURUS_SAPLING.asItem(), Models.GENERATED);
     }
     
 }

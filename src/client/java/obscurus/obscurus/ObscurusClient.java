@@ -9,6 +9,6 @@ public class ObscurusClient implements ClientModInitializer {
 	public void onInitializeClient() {
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ObscurusBlocks.OBSCURUS_SAPLING, RenderLayer.getCutout());
-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+
 	}
 }
